@@ -1,0 +1,6 @@
+Remove terminal from compiled
+
+Fix snippets
+
+Add plugins:
+rust-tools

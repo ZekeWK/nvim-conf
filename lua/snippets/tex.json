@@ -1,0 +1,923 @@
+{
+	"Align*": {
+		"prefix": "al",
+		"body": [
+			"\\begin{align*}",
+			"\t$0",
+			"\\end{align*}"
+		]
+	},
+	"fraction": {
+		"prefix": "f",
+		"body": [
+			"\\frac{${1:${TM_SELECTED_TEXT}}}{$2} $0"
+		]
+	},
+	"bold": {
+		"prefix": "bold",
+		"body": [
+			"\\textbf{${1:${TM_SELECTED_TEXT}}} $0"
+		]
+	},
+	"italic": {
+		"prefix": "italic",
+		"body": [
+			"\\textit{${1:${TM_SELECTED_TEXT}}} $0"
+		]
+	},
+	"underbrace": {
+		"prefix": "underbrace",
+		"body": [
+			"\\underbrace{${1:${TM_SELECTED_TEXT}}}_{$2} $0"
+		]
+	},
+	"overbrace": {
+		"prefix": "overbrace",
+		"body": [
+			"\\overbrace{${1:${TM_SELECTED_TEXT}}}_{$2} $0"
+		]
+	},
+	"bar": {
+		"prefix": "bar",
+		"body": [
+			"\\bar{${1:${TM_SELECTED_TEXT}}} $0"
+		]
+	},
+	"underset": {
+		"prefix": "underset",
+		"body": [
+			"\\underset{$1}{${2:${TM_SELECTED_TEXT}}} $0"
+		]
+	},
+	"overset": {
+		"prefix": "overset",
+		"body": [
+			"\\overset{$1}{${2:${TM_SELECTED_TEXT}}} $0"
+		]
+	},
+	"itemize": {
+		"prefix": "item",
+		"body": [
+			"\\begin{itemize}",
+			"\t\\item $1",
+			"\\end{itemize}",
+			"$0"
+		]
+	},
+	"enumerate": {
+		"prefix": "enum",
+		"body": [
+			"\\begin{enumerate}",
+			"\t\\item $1",
+			"\\end{enumerate}",
+			"$0"
+		]
+	},
+	"item": {
+		"prefix": "-",
+		"body": [
+			"\\item $0"
+		]
+	},
+	"Environment": {
+		"prefix": "beg",
+		"body": [
+			"\\begin{${1:name}}",
+			"\t$0",
+			"\\end{${1:name}}"
+		]
+	},
+	"Text": {
+		"prefix": "txt",
+		"body": [
+			"\\text{${1:${TM_SELECTED_TEXT}}} $0"
+		]
+	},
+	"Image": {
+		"prefix": "img",
+		"body": [
+			"\\begin{figure}[H]",
+			"\t\\centering",
+			"\t\\includegraphics[width=0.5\\textwidth]{${1:${TM_SELECTED_TEXT}}}",
+			"\t\\caption{${2:caption}\\label{fig:${3:sample}}}",
+			"\\end{figure}",
+			"$0"
+		]
+	},
+	"Table": {
+		"prefix": "tab",
+		"body": [
+			"\\begin{table}[H]",
+			"\t\\centering",
+			"\t\\begin{tabular}{${1:ccc}}",
+			"\t\t\\toprule",
+			"\t\ta & b & c \\\\\\ \\midrule",
+			"\t\t1 & 2 & 3 \\\\\\",
+			"\t\t\\bottomrule",
+			"\t\\end{tabular}",
+			"\t\\caption{${2:caption}\\label{tab:${3:sample}}}",
+			"\\end{table}",
+			"$0"
+		]
+	},
+	"pmatrix": {
+		"prefix": "pm",
+		"body": [
+			"\\begin{pmatrix}",
+			"$1",
+			"\\end{pmatrix}",
+			"$0"
+		]
+	},
+	"Integral": {
+		"prefix": "int",
+		"body": [
+			"\\int_{${1:0}}^{${2:\\infty}} $0"
+		]
+	},
+	"exponent": {
+		"prefix": "^",
+		"body": [
+			"^{${1:${TM_SELECTED_TEXT}}}$0"
+		]
+	},
+	"undersetinline": {
+		"prefix": "_",
+		"body": [
+			"_{$1}$0"
+		]
+	},
+	"parenthesis1": {
+		"prefix": "(",
+		"body": [
+			"(${1:${TM_SELECTED_TEXT}})"
+		]
+	},
+	"parenthesis2": {
+		"prefix": "((",
+		"body": [
+			"\\left(${1:${TM_SELECTED_TEXT}}\\right)"
+		]
+	},
+	"parenthesis3": {
+		"prefix": "[",
+		"body": [
+			"[${1:${TM_SELECTED_TEXT}}]"
+		]
+	},
+	"parenthesis4": {
+		"prefix": "[[",
+		"body": [
+			"\\left[${1:${TM_SELECTED_TEXT}}\\right]"
+		]
+	},
+	"parenthesis5": {
+		"prefix": "{",
+		"body": [
+			"{${1:${TM_SELECTED_TEXT}}}"
+		]
+	},
+	"parenthesis6": {
+		"prefix": "{{",
+		"body": [
+			"\\left\\{${1:${TM_SELECTED_TEXT}}\\right\\\\}"
+		]
+	},
+	"average": {
+		"prefix": "avg",
+		"body": [
+			"\\overline{${1:${TM_SELECTED_TEXT}}} $0"
+		]
+	},
+	"Sum": {
+		"prefix": "sum",
+		"body": [
+			"\\sum_{${1:k=1}}^{${2:\\infty}} $0"
+		]
+	},
+	"operatorname": {
+		"prefix": "op",
+		"body": [
+			"\\operatorname{${1:${TM_SELECTED_TEXT}}} $0"
+		]
+	},
+	"inlinemath": {
+		"prefix": "im",
+		"body": [
+			"\\(${1:${TM_SELECTED_TEXT}}\\) $0"
+		]
+	},
+	"displaymath": {
+		"prefix": "dm",
+		"body": [
+			"\\[", "\t${1:${TM_SELECTED_TEXT}}", "\\]", "$0"
+		]
+	},
+	"implies": {
+		"prefix": ["implies"],
+		"body": [
+			"\\\\Rightarrow $0"
+		]
+	},
+	"equivalent": {
+		"prefix": ["equivalent"],
+		"body": [
+			"\\\\Leftrightarrow $0"
+		]
+	},
+	"arrow": {
+		"prefix": ["arrow"],
+		"body": [
+			"\\\\rightarrow $0"
+		]
+	},
+	"definition": {
+		"prefix": ["definition"],
+		"body": [
+			"\\\\begin{definition}[$1]", "\t$2", "\\end{definition}", "$0"
+		]
+	},
+	"theorem": {
+		"prefix": ["theorem"],
+		"body": [
+			"\\\\begin{theorem}[$1]", "\t$2", "\\end{theorem}", "$0"
+		]
+	},
+	"sats": {
+		"prefix": "sats",
+		"body": [
+			"\\\\begin{sats}[$1]", "\t$2", "\\end{sats}", "$0"
+		]
+	},
+	"exempel": {
+		"prefix": ["exempel"],
+		"body": [
+			"\\\\begin{exempel}[$1]", "\t$2", "\\end{exempel}", "$0"
+		]
+	},
+	"example": {
+		"prefix": ["example"],
+		"body": [
+			"\\\\begin{example}[$1]", "\t$2", "\\end{example}", "$0"
+		]
+	},
+	"lemma": {
+		"prefix": ["lemma"],
+		"body": [
+			"\\\\begin{lemma}[$1]", "\t$2", "\\end{lemma}", "$0"
+		]
+	},
+	"corollary": {
+		"prefix": ["corollary"],
+		"body": [
+			"\\\\begin{corollary}[$1]", "\t$2", "\\end{corollary}", "$0"
+		]
+	},
+	"korollarium": {
+		"prefix": ["korollarium"],
+		"body": [
+			"\\\\begin{korollarium}[$1]", "\t$2", "\\end{korollarium}", "$0"
+		]
+	},
+	"proof": {
+		"prefix": ["proof"],
+		"body": [
+			"\\\\begin{proof}[$1]", "\t$2", "\\end{proof}", "$0"
+		]
+	},
+	"bevis": {
+		"prefix": ["bevis"],
+		"body": [
+			"\\\\begin{bevis}[$1]", "\t$2", "\\end{bevis}", "$0"
+		]
+	},
+	"omm": {
+		"prefix": "omm",
+		"body": [
+			"om och endast om $0"
+		]
+	},
+	"iff": {
+		"prefix": "iff",
+		"body": [
+			"if and only if $0"
+		]
+	},
+	"real": {
+		"prefix": ["RR"],
+		"body": [
+			"\\mathbb{R} $0"
+		]
+	},
+	"integer": {
+		"prefix": ["ZZ"],
+		"body": [
+			"\\mathbb{Z} $0"
+		]
+	},
+	"naturalnumbers": {
+		"prefix": ["NN"],
+		"body": [
+			"\\mathbb{N} $0"
+		]
+	},
+	"rational": {
+		"prefix": ["QQ"],
+		"body": [
+			"\\mathbb{Q} $0"
+		]
+	},
+	"complex": {
+		"prefix": ["CC"],
+		"body": [
+			"\\mathbb{C} $0"
+		]
+	},
+	"cdot": {
+		"prefix": ["*"],
+		"body": [
+			"$TM_SELECTED_TEXT \\cdot $0"
+		]
+	},
+	"infinity": {
+		"prefix": "inf",
+		"body": [
+			"\\infty $0"
+		]
+	},
+	"forall": {
+		"prefix": ["AA"],
+		"body": [
+			"\\forall $0"
+		]
+	},
+	"exists": {
+		"prefix": ["EE"],
+		"body": [
+			"\\exists $0"
+		]
+	},
+	"in": {
+		"prefix": "in",
+		"body": [
+			"\\in $0"
+		]
+	},
+	"geq": {
+		"prefix": "geq",
+		"body": [
+			"\\geq $0"
+		]
+	},
+	"leq": {
+		"prefix": "leq",
+		"body": [
+			"\\leq $0"
+		]
+	},
+	"ne": {
+		"prefix": "ne",
+		"body": [
+			"\\ne $0"
+		]
+	},
+	"lim": {
+		"prefix": "lim",
+		"body": [
+			"\\lim_{${1:h} \\rightarrow ${2:0}} ${3:f(x)} $0"
+		]
+	},
+	"sqrt": {
+		"prefix": "sqrt",
+		"body": [
+			"\\sqrt{${1:${TM_SELECTED_TEXT}}} $0"
+		]
+	},
+	"sin": {
+		"prefix": "sin",
+		"body": [
+			"\\sin(${1:${TM_SELECTED_TEXT}}) $0"
+		]
+	},
+	"cos": {
+		"prefix": "cos",
+		"body": [
+			"\\cos(${1:${TM_SELECTED_TEXT}}) $0"
+		]
+	},
+	"ln": {
+		"prefix": "ln",
+		"body": [
+			"\\ln(${1:${TM_SELECTED_TEXT}}) $0"
+		]
+	},
+	"root": {
+		"prefix": "root",
+		"body": [
+			"\\sqrt[$1]{${1:${TM_SELECTED_TEXT}}} $0"
+		]
+	},
+	"vspace": {
+		"prefix": "vspace",
+		"body": [
+			"\\vspace{$1ex}$0"
+		]
+	},
+	"newpage": {
+		"prefix": ["newpage"],
+		"body": [
+			"\\newpage $0"
+		]
+	},
+	"dy/dx": {
+		"prefix": "dydx",
+		"body": [
+      "\\frac{d${1:y}}{d${2:x}} $0"
+		]
+	},
+	"partial": {
+		"prefix": "partial",
+		"body": [
+      "\\frac{\\partial ${1:y}}{\\partial ${2:x}} $0"
+		]
+	},
+	"derivative": {
+		"prefix": "derivative",
+		"body": [
+      "\\lim_{${1:h} \\rightarrow 0} \\frac{${2:f}(x + h) - ${2:f}(x)}{h} $0"
+		]
+	},
+	"subset": {
+		"prefix": "subset",
+		"body": [
+			"\\subset $0"
+		]
+	},
+	"binom": {
+		"prefix": "binom",
+		"body": [
+			"\\binom{${1:n}}{${2:k}} $0"
+		]
+	},
+	"cases": {
+		"prefix": "cases",
+		"body": [
+			"\\begin{cases} ${1:${TM_SELECTED_TEXT}} \\end{cases} $0"
+		]
+	},
+	"not": {
+		"prefix": "not",
+		"body": [
+			"\\not $0"
+		]
+	},
+	"approx": {
+		"prefix": "approx",
+		"body": [
+			"\\approx $0"
+		]
+	},
+	"setminus": {
+		"prefix": "rm",
+		"body": [
+			"\\setminus $0"
+		]
+	},
+	"vector": {
+		"prefix": ["v"],
+		"body": [
+			"\\vec{${1:${TM_SELECTED_TEXT}}} $0"
+		]
+	},
+	"vector 2d": {
+		"prefix": ["v2"],
+		"body": [
+			"\\begin{pmatrix}",
+			"$1 \\\\\\",
+			"$2 \\\\\\",
+			"\\end{pmatrix}",
+			"$0"
+		]
+	},
+	"vector 3d": {
+		"prefix": ["v3"],
+		"body": [
+			"\\begin{pmatrix}",
+			"$1 \\\\\\",
+			"$2 \\\\\\",
+			"$3 \\\\\\",
+			"\\end{pmatrix}",
+			"$0"
+		]
+	},
+	"dots": {
+		"prefix": "...",
+		"body": [
+			"\\dots $0"
+		]
+	},
+	"vdots": {
+		"prefix": "vdots",
+		"body": [
+			"\\vdots $0"
+		]
+	},
+	"abs": {
+		"prefix": ["|", "abs"],
+		"body": [
+			"|${1:${TM_SELECTED_TEXT}}| $0"
+		]
+	},
+	"len": {
+		"prefix": "len",
+		"body": [
+			"|${1:${TM_SELECTED_TEXT}}| $0"
+		]
+	},
+	"cap": {
+		"prefix": ["nn"],
+		"body": [
+			"\\cap $0"
+		]
+	},
+	"cup": {
+		"prefix": ["uu"],
+		"body": [
+			"\\cup $0"
+		]
+	},
+	"emptyset": {
+		"prefix": ["0"],
+		"body": [
+			"\\emptyset $0"
+		]
+	},
+	"cross product": {
+		"prefix": ["xx"],
+		"body": [
+			"\\times $0"
+		]
+	},
+	"vec": {
+		"prefix": "vv",
+		"body": [
+			"\\begin{pmatrix} ${1:${TM_SELECTED_TEXT}} \\end{pmatrix}$0"
+		]
+	},
+	"determinant big": {
+		"prefix": "dd",
+		"body": [
+			"\\begin{vmatrix} ${1:${TM_SELECTED_TEXT}} \\end{vmatrix}$0"
+		]
+	},
+	"matrix 2x2": {
+		"prefix": "m2",
+		"body": [
+    "\\begin{pmatrix}[cc]",
+    "${1:0} & ${2:0} \\\\\\",
+    "${3:0} & ${4:0} \\\\\\",
+    "\\end{pmatrix}",
+    "$0"
+		]
+	},
+	"matrix 3x2": {
+		"prefix": "m32",
+		"body": [
+    "\\begin{pmatrix}[cc]",
+    "${1:0} & ${2:0} \\\\\\",
+    "${3:0} & ${4:0} \\\\\\",
+    "${5:0} & ${6:0} \\\\\\",
+    "\\end{pmatrix}",
+    "$0"
+		]
+	},
+	"matrix 2x3": {
+		"prefix": "m23",
+		"body": [
+    "\\begin{pmatrix}[ccc]",
+    "${1:0} & ${2:0} & ${3:0} \\\\\\",
+    "${4:0} & ${5:0} & ${6:0} \\\\\\",
+    "\\end{pmatrix}",
+    "$0"
+		]
+	},
+	"matrix 3x3": {
+		"prefix": "m3",
+		"body": [
+    "\\begin{pmatrix}[ccc]",
+    "${1:0} & ${2:0} & ${3:0} \\\\\\",
+    "${4:0} & ${5:0} & ${6:0} \\\\\\",
+    "${7:0} & ${8:0} & ${9:0} \\\\\\",
+    "\\end{pmatrix}",
+    "$0"
+		]
+	},
+	"matrix 3x4": {
+		"prefix": "m34",
+		"body": [
+    "\\begin{pmatrix}[cccc]",
+    "${1:0} & ${2:0} & ${3:0} & ${4:0} \\\\\\",
+    "${5:0} & ${6:0} & ${7:0} & ${8:0} \\\\\\",
+    "${9:0} & ${10:0} & ${11:0} & ${12:0} \\\\\\",
+    "\\end{pmatrix}",
+    "$0"
+		]
+	},
+	"matrix 3x6": {
+		"prefix": "m36",
+		"body": [
+    "\\begin{pmatrix}[ccc|ccc]",
+    "${1:0} & ${2:0} & ${3:0} & ${4:0} & ${5:0} & ${6:0} \\\\\\",
+    "${7:0} & ${8:0} & ${9:0} & ${10:0} & ${11:0} & ${12:0}\\\\\\",
+    "${13:0} & ${14:0} & ${15:0} & ${16:0} & ${17:0} & ${18:0}\\\\\\",
+    "\\end{pmatrix}",
+    "$0"
+		]
+	},
+	"matrix 4x4": {
+		"prefix": "m4",
+		"body": [
+    "\\begin{pmatrix}[cccc]",
+    "${1:0} & ${2:0} & ${3:0} & ${4:0} \\\\\\",
+    "${5:0} & ${6:0} & ${7:0} & ${8:0} \\\\\\",
+    "${9:0} & ${10:0} & ${11:0} & ${12:0} \\\\\\",
+    "${13:0} & ${14:0} & ${15:0} & ${16:0} \\\\\\",
+    "\\end{pmatrix}",
+    "$0"
+		]
+	},
+	"tex": {
+		"prefix": "tex",
+		"body": [
+			"till exempel $0"
+		]
+	},
+	"dvs": {
+		"prefix": "dvs",
+		"body": [
+		  "det vill säga $0"
+		]
+	},
+	"pi": {
+		"prefix": "pi",
+		"body": [
+			"\\pi $0"
+		]
+	},
+	"lambda": {
+		"prefix": "lambda",
+		"body": [
+			"\\lambda $0"
+		]
+	},
+	"Omega": {
+		"prefix": "Omega",
+		"body": [
+			"\\Omega $0"
+		]
+	},
+	"omega": {
+		"prefix": "omega",
+		"body": [
+			"\\omega $0"
+		]
+	},
+	"alpha": {
+		"prefix": "alpha",
+		"body": [
+			"\\alpha $0"
+		]
+	},
+	"beta": {
+		"prefix": "beta",
+		"body": [
+			"\\beta $0"
+		]
+	},
+	"Delta": {
+		"prefix": "Delta",
+		"body": [
+			"\\Delta $0"
+		]
+	},
+	"delta": {
+		"prefix": "delta",
+		"body": [
+			"\\delta $0"
+		]
+	},
+	"mu": {
+		"prefix": "mu",
+		"body": [
+			"\\mu $0"
+		]
+	},
+	"sigma": {
+		"prefix": "sigma",
+		"body": [
+			"\\sigma $0"
+		]
+	},
+	"epsilon": {
+		"prefix": "epsilon",
+		"body": [
+			"\\epsilon $0"
+		]
+	},
+	"rho": {
+		"prefix": "rho",
+		"body": [
+			"\\rho $0"
+		]
+	},
+	"iterator": {
+		"prefix": "iter",
+		"body": [
+		  "${1:x}_1${2:,} ${1:x}_2${2:,} \\dots ${2:,} ${1:x}_${3:n} $0"
+		]
+	},
+	"section": {
+		"prefix": "section",
+		"body": [
+			"\\section{$1}",
+			"$0"
+		]
+	},
+	"subsection": {
+		"prefix": "subsection",
+		"body": [
+			"\\subsection{$1}",
+			"$0"
+		]
+	},
+	"header": {
+		"prefix": "header",
+		"body": [
+			"\\section*{$1}",
+			"$0"
+		]
+	},
+	"subheader": {
+		"prefix": "subheader",
+		"body": [
+			"\\subsection*{$1}",
+			"$0"
+		]
+	},
+	"theta": {
+		"prefix": "theta",
+		"body": [
+			"\\theta $0"
+		]
+	},
+	"dell": {
+		"prefix": "dell",
+		"body": [
+			"\\partial $0"
+		]
+	},
+	"nabla": {
+		"prefix": "nabla",
+		"body": [
+			"\\nabla $0"
+		]
+	},
+	"iint": {
+		"prefix": "iint",
+		"body": [
+			"\\iint_{${1:D}} $0"
+		]
+	},
+	"circ": {
+		"prefix": "cirk",
+		"body": [
+			"\\circ $0"
+		]
+	},
+	"sim": {
+		"prefix": "sim",
+		"body": [
+			"\\sim $0"
+		]
+	},
+	"determinant": {
+		"prefix": "det",
+		"body": [
+			"\\det $0"
+		]
+	},
+	"perpendicular": {
+		"prefix": "perp",
+		"body": [
+			"\\perp $0"
+		]
+	},
+	"mathrm": {
+		"prefix": "rm",
+		"body": [
+			"\\mathrm{$1} $0"
+		]
+	},
+	"mathrm": {
+		"prefix": "rm",
+		"body": [
+			"\\mathrm{$1} $0"
+		]
+	},
+	"mathrm": {
+		"prefix": "rm",
+		"body": [
+			"\\mathrm{$1} $0"
+		]
+	},
+	"mathrm": {
+		"prefix": "rm",
+		"body": [
+			"\\mathrm{$1} $0"
+		]
+	},
+	"mathrm": {
+		"prefix": "rm",
+		"body": [
+			"\\mathrm{$1} $0"
+		]
+	},
+	"mathrm": {
+		"prefix": "rm",
+		"body": [
+			"\\mathrm{$1} $0"
+		]
+	},
+	"mathrm": {
+		"prefix": "rm",
+		"body": [
+			"\\mathrm{$1} $0"
+		]
+	},
+	"mathrm": {
+		"prefix": "rm",
+		"body": [
+			"\\mathrm{$1} $0"
+		]
+	},
+	"mathrm": {
+		"prefix": "rm",
+		"body": [
+			"\\mathrm{$1} $0"
+		]
+	},
+	"mathrm": {
+		"prefix": "rm",
+		"body": [
+			"\\mathrm{$1} $0"
+		]
+	},
+	"mathrm": {
+		"prefix": "rm",
+		"body": [
+			"\\mathrm{$1} $0"
+		]
+	},
+	"mathrm": {
+		"prefix": "rm",
+		"body": [
+			"\\mathrm{$1} $0"
+		]
+	},
+	"mathrm": {
+		"prefix": "rm",
+		"body": [
+			"\\mathrm{$1} $0"
+		]
+	},
+	"mathrm": {
+		"prefix": "rm",
+		"body": [
+			"\\mathrm{$1} $0"
+		]
+	},
+	"mathrm": {
+		"prefix": "rm",
+		"body": [
+			"\\mathrm{$1} $0"
+		]
+	},
+	"mathrm": {
+		"prefix": "rm",
+		"body": [
+			"\\mathrm{$1} $0"
+		]
+	},
+	"mathrm": {
+		"prefix": "rm",
+		"body": [
+			"\\mathrm{$1} $0"
+		]
+	},
+	"mathrm": {
+		"prefix": "rm",
+		"body": [
+			"\\mathrm{$1} $0"
+		]
+	}
+}
