@@ -237,6 +237,12 @@
 			"\\\\begin{definition}[$1]", "\t$2", "\\end{definition}", "$0"
 		]
 	},
+	"problem": {
+		"prefix": ["problem"],
+		"body": [
+			"\\\\begin{problem}", "\t$1", "\\end{problem}", "$0"
+		]
+	},
 	"theorem": {
 		"prefix": ["theorem"],
 		"body": [
@@ -252,7 +258,7 @@
 	"exempel": {
 		"prefix": ["exempel"],
 		"body": [
-			"\\\\begin{exempel}[$1]", "\t$2", "\\end{exempel}", "$0"
+			"\\\\begin{exempel}", "\t$2", "\\end{exempel}", "$0"
 		]
 	},
 	"example": {
@@ -484,7 +490,7 @@
 		]
 	},
 	"vector": {
-		"prefix": ["v"],
+		"prefix": ["vec"],
 		"body": [
 			"\\vec{${1:${TM_SELECTED_TEXT}}} $0"
 		]

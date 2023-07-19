@@ -36,11 +36,19 @@ local lsp_flags = {
   -- This is the default in Nvim 0.7+
   debounce_text_changes = 150,
 }
+require('lspconfig')['ccls'].setup{
+    on_attach = on_attach,
+    flags = lsp_flags,
+}
 require('lspconfig')['pylsp'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
 }
 require('lspconfig')['texlab'].setup{
+    on_attach = on_attach,
+    flags = lsp_flags,
+}
+require('lspconfig')['tsserver'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
 }
@@ -54,5 +62,18 @@ require('lspconfig')['rust_analyzer'].setup{
     -- Server-specific settings...
     settings = {
       ["rust-analyzer"] = {}
-    }
+	  }
+}
+require("lspconfig")['gopls'].setup {
+cmd = {"gopls", "serve"},
+	filetypes = {"go", "gomod"},
+--	root_dir = util.root_pattern("go.work", "go.mod", ".git"),
+	settings = {
+		gopls = {
+			analyses = {
+				unusedparams = true,
+			},
+			staticcheck = true,
+		},
+	},
 }
