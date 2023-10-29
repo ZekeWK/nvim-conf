@@ -29,8 +29,13 @@ return require('packer').startup(function(use)
 	-- Latex
 	use 'lervag/vimtex'
 
+	-- Java 
+	use 'mfussenegger/nvim-jdtls'
+
 	-- Rust
 	use 'simrat39/rust-tools.nvim'
+
+	-- CSV
 	use {
     'cameron-wags/rainbow_csv.nvim',
     config = function()

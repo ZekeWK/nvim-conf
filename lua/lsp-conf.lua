@@ -52,6 +52,30 @@ require('lspconfig')['tsserver'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
 }
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "java",
+  callback = function(args)
+		require('jdtls').start_or_attach({
+				cmd = {'jdtls'},
+				root_dir = vim.fs.dirname(vim.fs.find({'gradlew', '.git', 'mvnw'}, { upward = true })[1]),
+				on_attach = on_attach,
+				flags = lsp_flags,
+		})
+		-- Does not have client, but should not be neccessary
+		 on_attach(nil, args.buf)
+  end,
+})
+
+
+
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+require('lspconfig')['html'].setup{
+	capabilities=capabilities,
+	on_attach = on_attach,
+	flags = lsp_flags,
+}
 -- require('lspconfig')['tsserver'].setup{
 --     on_attach = on_attach,
 --     flags = lsp_flags,

@@ -48,7 +48,7 @@ cmp.setup({
 	sources = cmp.config.sources({
 		{ name = 'luasnip', max_item_count = 3 }, -- For luasnip users.
 
-		{ name = 'nvim_lsp', max_item_count = 3, keyword_length = 2},
+		{ name = 'nvim_lsp', max_item_count = 3},
 		-- { name = 'vsnip' }, -- For vsnip users.
 		-- { name = 'ultisnips' }, -- For ultisnips users.
 		-- { name = 'snippy' }, -- For snippy users.

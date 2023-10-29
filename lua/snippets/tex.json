@@ -297,6 +297,18 @@
 			"\\\\begin{bevis}[$1]", "\t$2", "\\end{bevis}", "$0"
 		]
 	},
+	"metod": {
+		"prefix": ["metod"],
+		"body": [
+			"\\\\begin{metod}[$1]", "\t$2", "\\end{metod}", "$0"
+		]
+	},
+	"method": {
+		"prefix": ["method"],
+		"body": [
+			"\\\\begin{method}[$1]", "\t$2", "\\end{method}", "$0"
+		]
+	},
 	"omm": {
 		"prefix": "omm",
 		"body": [
