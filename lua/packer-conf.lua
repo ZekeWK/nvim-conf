@@ -13,6 +13,8 @@ return require('packer').startup(function(use)
 	use 'hrsh7th/cmp-buffer'
 	use 'hrsh7th/cmp-path'
 	use 'hrsh7th/cmp-cmdline'
+	use 'Darazaki/indent-o-matic'
+
 
 	use({
 		"L3MON4D3/LuaSnip",

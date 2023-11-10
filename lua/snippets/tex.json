@@ -94,7 +94,7 @@
 		]
 	},
 	"Image": {
-		"prefix": "img",
+		"prefix": "image",
 		"body": [
 			"\\begin{figure}[H]",
 			"\t\\centering",
@@ -190,9 +190,27 @@
 		]
 	},
 	"Sum": {
-		"prefix": "sum",
+		"prefix": "SUM",
 		"body": [
 			"\\sum_{${1:k=1}}^{${2:\\infty}} $0"
+		]
+	},
+	"sum": {
+		"prefix": "sum",
+		"body": [
+			"\\sum_{${1}} $0"
+		]
+	},
+	"Prod": {
+		"prefix": "PROD",
+		"body": [
+			"\\prod{${1:k=1}}^{${2:\\infty}} $0"
+		]
+	},
+	"prod": {
+		"prefix": "prod",
+		"body": [
+			"\\prod_{${1}} $0"
 		]
 	},
 	"operatorname": {
@@ -300,13 +318,19 @@
 	"metod": {
 		"prefix": ["metod"],
 		"body": [
-			"\\\\begin{metod}[$1]", "\t$2", "\\end{metod}", "$0"
+			"\\\\begin{metod}", "\t$2", "\\end{metod}", "$0"
 		]
 	},
 	"method": {
 		"prefix": ["method"],
 		"body": [
-			"\\\\begin{method}[$1]", "\t$2", "\\end{method}", "$0"
+			"\\\\begin{method}", "\t$2", "\\end{method}", "$0"
+		]
+	},
+	"obs": {
+		"prefix": ["obs"],
+		"body": [
+			"\\\\begin{obs}", "\t$2", "\\end{obs}", "$0"
 		]
 	},
 	"omm": {
@@ -397,6 +421,12 @@
 		"prefix": "ne",
 		"body": [
 			"\\ne $0"
+		]
+	},
+	"cong": {
+		"prefix": "cong",
+		"body": [
+			"\\cong $0"
 		]
 	},
 	"lim": {
@@ -676,6 +706,18 @@
 		  "det vill säga $0"
 		]
 	},
+	"map": {
+		"prefix": "map",
+		"body": [
+		  "med avseende på $0"
+		]
+	},
+	"mha": {
+		"prefix": "mha",
+		"body": [
+		  "med hjälp av $0"
+		]
+	},
 	"pi": {
 		"prefix": "pi",
 		"body": [
@@ -742,10 +784,40 @@
 			"\\epsilon $0"
 		]
 	},
+	"Rho": {
+		"prefix": "Rho",
+		"body": [
+			"\\Rho $0"
+		]
+	},
 	"rho": {
 		"prefix": "rho",
 		"body": [
 			"\\rho $0"
+		]
+	},
+	"phi": {
+		"prefix": "phi",
+		"body": [
+			"\\phi $0"
+		]
+	},
+	"Phi": {
+		"prefix": "Phi",
+		"body": [
+			"\\Phi $0"
+		]
+	},
+	"psi": {
+		"prefix": "psi",
+		"body": [
+			"\\psi $0"
+		]
+	},
+	"Psi": {
+		"prefix": "Psi",
+		"body": [
+			"\\Psi $0"
 		]
 	},
 	"iterator": {
@@ -824,34 +896,40 @@
 			"\\det $0"
 		]
 	},
+	"dimension": {
+		"prefix": "dim",
+		"body": [
+			"\\dim $0"
+		]
+	},
 	"perpendicular": {
 		"prefix": "perp",
 		"body": [
 			"\\perp $0"
 		]
 	},
-	"mathrm": {
-		"prefix": "rm",
+	"oplus": {
+		"prefix": "oplus",
 		"body": [
-			"\\mathrm{$1} $0"
+			"\\oplus $0"
 		]
 	},
-	"mathrm": {
-		"prefix": "rm",
+	"kernel": {
+		"prefix": "opker",
 		"body": [
-			"\\mathrm{$1} $0"
+			"\\opker $0"
 		]
 	},
-	"mathrm": {
-		"prefix": "rm",
+	"span": {
+		"prefix": "opspan",
 		"body": [
-			"\\mathrm{$1} $0"
+			"\\opspan $0"
 		]
 	},
-	"mathrm": {
-		"prefix": "rm",
+	"image operator": {
+		"prefix": "opim",
 		"body": [
-			"\\mathrm{$1} $0"
+			"\\opim $0"
 		]
 	},
 	"mathrm": {

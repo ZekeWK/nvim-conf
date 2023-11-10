@@ -25,3 +25,9 @@ vim.api.nvim_create_autocmd({"BufWinEnter"}, {
   desc = "load view (folds), when opening file",
   command = "silent! loadview"
 })
+
+-- Keymaps
+vim.api.nvim_set_keymap('v', '§', "<Esc>i", { noremap = true, silent = true });
+vim.api.nvim_set_keymap('n', '§', "i§", { noremap = false, silent = true });
+vim.api.nvim_set_keymap('i', 'jj', "<Esc>", { noremap = true, silent = true });
+vim.api.nvim_set_keymap('i', 'jk', "<Esc>", { noremap = true, silent = true });

@@ -58,7 +58,7 @@ vim.api.nvim_create_autocmd("FileType", {
   callback = function(args)
 		require('jdtls').start_or_attach({
 				cmd = {'jdtls'},
-				root_dir = vim.fs.dirname(vim.fs.find({'gradlew', '.git', 'mvnw'}, { upward = true })[1]),
+				root_dir = vim.fs.dirname(vim.fs.find({'gradlew', '.git', 'mvnw', '.wkproj'}, { upward = true })[1]),
 				on_attach = on_attach,
 				flags = lsp_flags,
 		})
@@ -100,4 +100,36 @@ cmd = {"gopls", "serve"},
 			staticcheck = true,
 		},
 	},
+}
+
+require'lspconfig'.lua_ls.setup {
+  on_init = function(client)
+    local path = client.workspace_folders[1].name
+    if not vim.loop.fs_stat(path..'/.luarc.json') and not vim.loop.fs_stat(path..'/.luarc.jsonc') then
+      client.config.settings = vim.tbl_deep_extend('force', client.config.settings, {
+        Lua = {
+          runtime = {
+            -- Tell the language server which version of Lua you're using
+            -- (most likely LuaJIT in the case of Neovim)
+            version = 'LuaJIT'
+          },
+          -- Make the server aware of Neovim runtime files
+          workspace = {
+            checkThirdParty = false,
+            library = {
+              vim.env.VIMRUNTIME,
+              vim.env.VIMINIT,
+              -- "${3rd}/luv/library"
+              -- "${3rd}/busted/library",
+            }
+            -- or pull in all of 'runtimepath'. NOTE: this is a lot slower
+            -- library = vim.api.nvim_get_runtime_file("", true)
+          }
+        }
+      })
+
+      client.notify("workspace/didChangeConfiguration", { settings = client.config.settings })
+    end
+    return true
+  end
 }

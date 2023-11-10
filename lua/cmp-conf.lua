@@ -3,6 +3,23 @@ local cmp = require'cmp'
 local luasnip = require'luasnip'
 
 cmp.setup({
+	sorting = {
+		comparators = {
+			cmp.config.compare.exact,
+			cmp.config.compare.length,
+			cmp.config.compare.order,
+			cmp.config.compare.kind,
+
+			-- cmp.config.compare.offset,
+			-- cmp.config.compare.exact,
+			-- cmp.config.compare.score,
+			-- cmp.config.compare.kind,
+			-- cmp.config.compare.sort_text,
+			-- cmp.config.compare.length,
+			-- cmp.config.compare.order,
+		},
+	},
+
 	snippet = {
 		-- REQUIRED - you must specify a snippet engine
 		expand = function(args)
@@ -42,17 +59,19 @@ cmp.setup({
 			if luasnip.jumpable() then luasnip.jump(-1) end
 		end,
 		['§'] = function()
-			if luasnip.jumpable() then luasnip.jump(1) end
+			if luasnip.jumpable() then
+				luasnip.jump(1)
+			end
 		end
 	}),
 	sources = cmp.config.sources({
-		{ name = 'luasnip', max_item_count = 3 }, -- For luasnip users.
+		{ name = 'luasnip', max_item_count = 5 }, -- For luasnip users.
 
-		{ name = 'nvim_lsp', max_item_count = 3},
+		{ name = 'nvim_lsp', max_item_count = 10},
 		-- { name = 'vsnip' }, -- For vsnip users.
 		-- { name = 'ultisnips' }, -- For ultisnips users.
 		-- { name = 'snippy' }, -- For snippy users.
-	}, 
+	},
 	{
 		{ name = 'buffer', max_item_count = 3, keyword_length = 2 },
 		{ name = 'path', max_item_count = 3, keyword_length = 2},
