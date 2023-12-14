@@ -32,5 +32,5 @@ end
 -- vim.api.nvim_err_writeln(Dump(cmp));
 
 function print(s)
-	vim.api.nvim_err_writeln(s);
+	vim.print(s);
 end

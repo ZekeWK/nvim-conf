@@ -13,6 +13,9 @@ vim.o.smartcase = true
 -- Extra files
 vim.o.undofile = true
 
+-- Terminal
+vim.api.nvim_set_var('terminal_emulator', 'zsh')
+
 
 -- Folding
 vim.api.nvim_create_autocmd({"BufWinLeave"}, {

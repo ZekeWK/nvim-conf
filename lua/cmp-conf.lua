@@ -8,7 +8,6 @@ cmp.setup({
 			cmp.config.compare.exact,
 			cmp.config.compare.length,
 			cmp.config.compare.order,
-			cmp.config.compare.kind,
 
 			-- cmp.config.compare.offset,
 			-- cmp.config.compare.exact,
@@ -17,6 +16,7 @@ cmp.setup({
 			-- cmp.config.compare.sort_text,
 			-- cmp.config.compare.length,
 			-- cmp.config.compare.order,
+			-- cmp.config.compare.kind,
 		},
 	},
 
