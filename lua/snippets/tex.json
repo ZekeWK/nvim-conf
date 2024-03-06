@@ -287,6 +287,24 @@
 			"\\circ $0"
 		]
 	},
+	"triang": {
+		"prefix": "triang",
+		"body": [
+			"\\trianglelefteq $0"
+		]
+	},
+	"define": {
+		"prefix": "define",
+		"body": [
+			"\\coloneqq $0"
+		]
+	},
+	"empty": {
+		"prefix": "empty",
+		"body": [
+			"\\emptyset $0"
+		]
+	},
 	"pi": {
 		"prefix": "pi",
 		"body": [
@@ -309,6 +327,12 @@
 		"prefix": "omega",
 		"body": [
 			"\\omega $0"
+		]
+	},
+	"gamma": {
+		"prefix": "gamma",
+		"body": [
+			"\\gamma $0"
 		]
 	},
 	"alpha": {
@@ -368,7 +392,7 @@
 	"epsilon": {
 		"prefix": "epsilon",
 		"body": [
-			"\\epsilon $0"
+			"\\varepsilon $0"
 		]
 	},
 	"Rho": {
@@ -459,6 +483,12 @@
 		"prefix": "root",
 		"body": [
 			"\\sqrt[$1]{${1:${TM_SELECTED_TEXT}}} $0"
+		]
+	},
+	"gcd": {
+		"prefix": "gcd",
+		"body": [
+			"\\gcd(${1:${TM_SELECTED_TEXT}}) $0"
 		]
 	},
 	"dagger": {

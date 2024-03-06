@@ -34,3 +34,4 @@ vim.api.nvim_set_keymap('v', '§', "<Esc>i", { noremap = true, silent = true });
 vim.api.nvim_set_keymap('n', '§', "i§", { noremap = false, silent = true });
 vim.api.nvim_set_keymap('i', 'jj', "<Esc>", { noremap = true, silent = true });
 vim.api.nvim_set_keymap('i', 'jk', "<Esc>", { noremap = true, silent = true });
+vim.api.nvim_set_keymap('n', 'å', "@q", { noremap = false, silent = true });

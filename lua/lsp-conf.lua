@@ -41,9 +41,21 @@ require('lspconfig')['ccls'].setup{
     flags = lsp_flags,
 }
 require('lspconfig')['pylsp'].setup{
-    on_attach = on_attach,
-    flags = lsp_flags,
+  on_attach = on_attach,
+  flags = lsp_flags,
+  ignore = {'E303'},
+  settings = {
+    pylsp = {
+      plugins = {
+        pycodestyle = {
+          ignore = {'W391', 'E303', 'E302', 'E226'},
+          maxLineLength = 100000000
+        }
+      }
+    }
+  }
 }
+
 require('lspconfig')['texlab'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
