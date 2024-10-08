@@ -35,6 +35,12 @@
 			"\\left\\{${1:${TM_SELECTED_TEXT}}\\right\\\\}"
 		]
 	},
+	"brackets": {
+		"prefix": "<<",
+		"body": [
+			"\\langle ${1:${TM_SELECTED_TEXT}} \\rangle"
+		]
+	},
 	"abs": {
 		"prefix": ["|", "abs", "len"],
 		"body": [
@@ -179,6 +185,12 @@
 			"$TM_SELECTED_TEXT \\cdot $0"
 		]
 	},
+	"star": {
+		"prefix": ["star"],
+		"body": [
+			"$TM_SELECTED_TEXT \\star $0"
+		]
+	},
 	"forall": {
 		"prefix": ["AA"],
 		"body": [
@@ -282,7 +294,7 @@
 		]
 	},
 	"circ": {
-		"prefix": "cirk",
+		"prefix": "circ",
 		"body": [
 			"\\circ $0"
 		]
@@ -387,6 +399,12 @@
 		"prefix": "sigma",
 		"body": [
 			"\\sigma $0"
+		]
+	},
+	"varphi": {
+		"prefix": "varphi",
+		"body": [
+			"\\varphi $0"
 		]
 	},
 	"epsilon": {
@@ -569,6 +587,18 @@
 			"\\opim $0"
 		]
 	},
+	"label": {
+		"prefix": "label",
+		"body": [
+			"\\label{${1:${TM_SELECTED_TEXT}}} $0"
+		]
+	},
+	"ref": {
+		"prefix": "ref",
+		"body": [
+			"\\ref{${1:${TM_SELECTED_TEXT}}} $0"
+		]
+	},
 	"real": {
 		"prefix": ["RR"],
 		"body": [
@@ -649,6 +679,12 @@
 			"\\end{align*}"
 		]
 	},
+	"quotes": {
+		"prefix": "\"",
+		"body": [
+			"``${1:${TM_SELECTED_TEXT}}'' $0"
+		]
+	},
 	"bold": {
 		"prefix": "bold",
 		"body": [
@@ -659,6 +695,18 @@
 		"prefix": "italic",
 		"body": [
 			"\\textit{${1:${TM_SELECTED_TEXT}}} $0"
+		]
+	},
+	"mathbb": {
+		"prefix": "mathbb",
+		"body": [
+			"\\mathbb{${1:${TM_SELECTED_TEXT}}} $0"
+		]
+	},
+	"mathfrak": {
+		"prefix": "mathfrak",
+		"body": [
+			"\\mathfrak{${1:${TM_SELECTED_TEXT}}} $0"
 		]
 	},
 	"implies": {
