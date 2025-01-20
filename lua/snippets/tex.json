@@ -305,12 +305,6 @@
 			"\\trianglelefteq $0"
 		]
 	},
-	"define": {
-		"prefix": "define",
-		"body": [
-			"\\coloneqq $0"
-		]
-	},
 	"empty": {
 		"prefix": "empty",
 		"body": [
@@ -387,6 +381,12 @@
 		"prefix": "mu",
 		"body": [
 			"\\mu $0"
+		]
+	},
+	"nu": {
+		"prefix": "nu",
+		"body": [
+			"\\nu $0"
 		]
 	},
 	"tau": {
@@ -597,6 +597,12 @@
 		"prefix": "ref",
 		"body": [
 			"\\ref{${1:${TM_SELECTED_TEXT}}} $0"
+		]
+	},
+	"cite": {
+		"prefix": "cite",
+		"body": [
+			"\\cite{${1:${TM_SELECTED_TEXT}}} $0"
 		]
 	},
 	"real": {
